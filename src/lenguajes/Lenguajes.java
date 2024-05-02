@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Lenguajes {
 
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
+        Scanner text = new Scanner(System.in);
 
         int n;
 
         System.out.println("ingrese el numero");
-        n = t.nextInt();
+        n = text.nextInt();
 
         Numero numer = new Numero();
         
