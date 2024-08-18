@@ -5,18 +5,20 @@ import java.util.Scanner;
 public class Lenguajes {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
+        try (Scanner textoScanner = new Scanner(System.in)) {
+            int numero;
 
-        int numero;
+            System.out.println("ingrese el numero");
+            numero = textoScanner.nextInt();
 
-        System.out.println("ingrese el numero");
-        numero = textoScanner.nextInt();
-
-        Numero numer = new Numero();
+            Numero numer = new Numero();
         
-        numer.setNum(numero);
+            numer.setNum(numero);
         
-        numer.suma();
+            numer.suma();
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error: "+e.getMessage());
+        }
     }
 
 }
