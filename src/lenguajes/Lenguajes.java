@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class Lenguajes {
 
     public static void main(String[] args) {
-        Scanner text = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
 
-        int n;
+        int numero;
 
         System.out.println("ingrese el numero");
-        n = text.nextInt();
+        numero = textoScanner.nextInt();
 
         Numero numer = new Numero();
         
-        numer.setNum(n);
+        numer.setNum(numero);
         
         numer.suma();
     }
