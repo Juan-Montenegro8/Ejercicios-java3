@@ -5,16 +5,19 @@ import java.util.Scanner;
 public class Cesar {
 
     public static void main(String[] args) {
-        Scanner textoScanner = new Scanner(System.in);
         
-        System.out.print("Ingresa el mensaje a cifrar: ");
-        String mensaje = textoScanner.nextLine();
+        try (Scanner textoScanner = new Scanner(System.in)) {
+            System.out.print("Ingresa el mensaje a cifrar: ");
+            String mensaje = textoScanner.nextLine();
         
-        System.out.print("Ingresa la cantidad de desplazamiento: ");
-        int desplazamiento = textoScanner.nextInt();
+            System.out.print("Ingresa la cantidad de desplazamiento: ");
+            int desplazamiento = textoScanner.nextInt();
         
-        String mensajeCifrado = cifrar(mensaje, desplazamiento);
-        System.out.println("El mensaje cifrado es: " + mensajeCifrado);
+            String mensajeCifrado = cifrar(mensaje, desplazamiento);
+            System.out.println("El mensaje cifrado es: " + mensajeCifrado);    
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error: "+e.getMessage());
+        }
     }
     public static String cifrar(String mensaje, int desplazamiento) {
         String resultado = "";
