@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Cesar {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner textoScanner = new Scanner(System.in);
         
         System.out.print("Ingresa el mensaje a cifrar: ");
-        String mensaje = scanner.nextLine();
+        String mensaje = textoScanner.nextLine();
         
         System.out.print("Ingresa la cantidad de desplazamiento: ");
-        int desplazamiento = scanner.nextInt();
+        int desplazamiento = textoScanner.nextInt();
         
         String mensajeCifrado = cifrar(mensaje, desplazamiento);
         System.out.println("El mensaje cifrado es: " + mensajeCifrado);
